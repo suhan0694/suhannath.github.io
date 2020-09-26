@@ -1,0 +1,78 @@
+<h2 class="header-vis">Visualization of Gun Deaths in the US</h2>
+
+<fieldset>
+    <legend>Please select your view</legend>
+    <div id="radio">
+        <label>
+            <input type="radio" name="radio-button" checked value="SHOOTINGS" />
+            <span>All Shootings</span>
+        </label>
+    </div>
+    <div id="radio">
+        <label>
+            <input type="radio" name="radio-button" value="DEATHS" />
+            <span>Total Deaths</span>
+        </label>
+    </div>
+    <div id="radio">
+        <label>
+            <input " type="radio" name="radio-button" value="GENDER"/>
+            <span>Male vs Female</span>
+        </label>
+    </div>
+    <div id="radio">
+        <label>
+            <input type="radio" name="radio-button" value="AGE" />
+            <span>Statewise Death based on Age Group</span>
+        </label>
+    </div>
+    <div>
+        <button id="selectorBtn">Show Selected Option</button>
+    </div>
+</fieldset>
+
+<svg id="map" class="svg__map"></svg>
+
+<div id="svgs" class="svg__container hide">
+    <object id="man" type="image/svg+xml" data="../resource/man.svg">
+        Your browser does not support SVG
+    </object>
+    <object id="female" type="image/svg+xml" data="../resource/girl.svg">
+        Your browser does not support SVG
+    </object>
+    <object
+        id="teens"
+        type="image/svg+xml"
+        data="../resource/sister-and-brother.svg"
+    >
+        Your browser does not support SVG
+    </object>
+    <object
+        id="young"
+        class="young"
+        type="image/svg+xml"
+        data="../resource/kids-child.svg"
+    >
+        Your browser does not support SVG
+    </object>
+</div>
+<div class="svg__container">
+    <svg id="svg-icon-legend"></svg>
+</div>
+
+<div class="header-vis">
+    <h3>Instructions:</h3>
+    <ul>
+        <li>Select the desired view using the radio buttons</li>
+        <li>Zoom in and hover over datapoints for more details</li>
+        <li>
+            On the statewise view, click on a state to see the age-group death
+            distribution per state, represented by the 4 svg icons (Male,
+            Female, Teens, Kids)
+        </li>
+    </ul>
+</div>
+
+<script>
+    initD3GunMap()
+</script>

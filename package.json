@@ -1,0 +1,24 @@
+{
+  "name": "cs529-hw01",
+  "version": "1.0.0",
+  "description": "hw01",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhan0694/cs529-hw01.git"
+  },
+  "author": "Suhan Nath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suhan0694/cs529-hw01/issues"
+  },
+  "homepage": "https://github.com/suhan0694/cs529-hw01#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "prettier": "2.1.2"
+  }
+}

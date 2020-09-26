@@ -1,0 +1,27 @@
+<section >
+    <svg class="svg__shapes" viewBox="0 0 500 1000"
+        xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    <rect  id="rectangle" x="-100" y="-100" width="250" height="200"
+             fill="#4286f4" stroke-width="5" stroke="#373B44" class="rectangle">
+    </rect>        
+    
+    <rect id="square" x="-100" y="-100" width="250" height="250"
+            fill="#99f2c8" stroke-width="5" stroke="#1f4037" class="square">
+           </rect>  
+    
+    <circle id="circle" cx="-100" cy="-100" r="125" fill="#f5af19" stroke-width="5" stroke="#f12711" class="circle"/>
+    </svg>
+</section>
+
+<script>
+    $("#rectangle").on("click", function() {
+        $("#rectangle").toggleClass("rectangle rectangle-reverse");
+    })
+    $("#square").on("click", function() {
+        $("#square").toggleClass("square square-reverse");
+    })
+    $("#circle").on("click", function() {
+        $("#circle").toggleClass("circle circle-reverse");
+    })
+</script>

@@ -1,0 +1,308 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Lora', serif;
+    --ff-secondary: 'Roboto Slab', serif;
+    --clr-accent: #f8333c;
+    --clr-dark: #303030;
+    --clr-light: #fff;
+    --clr-grey: #eeeeee;
+    --fw-reg: 400;
+    --fw-bold: 700;
+    --fs-body: 2rem;
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 5rem 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 15rem;
+    order: 1;
+}
+
+nav {
+    order: 2;
+}
+
+.nav__links a {
+    font-family: var(--ff-primary);
+    font-size: 1.75rem;
+    font-weight: 200;
+    color: var(--clr-dark);
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    font-size: 2rem;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+}
+
+.nav__links li:nth-child(1) {
+    padding: 0 20px 0 0;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: var(--clr-accent);
+}
+
+.about-me {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 30rem;
+        grid-template-areas:
+            'title img'
+            'text img';
+        grid-column-gap: 2rem;
+    }
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.data-viz {
+    display: grid;
+    grid-template-rows: 75% 20% 5%;
+    grid-template-areas:
+        'img'
+        'text';
+}
+
+.data-viz p a:hover {
+    color: var(--clr-accent);
+}
+
+.data-viz__img {
+    grid-area: img;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.data-viz__text-desc {
+    grid-area: text;
+}
+
+.reference-list a:hover {
+    color: var(--clr-accent);
+}
+
+.svg__shapes {
+    border: 3px solid #eee;
+    width: 50rem;
+    height: 75rem;
+    display: block;
+    margin: 1rem auto;
+    background-color: var(--clr-grey);
+}
+
+.svg__map {
+    border: 3px solid #eee;
+    width: 90rem;
+    height: 55rem;
+    display: block;
+    margin: 1rem auto;
+    background-color: var(--clr-grey);
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    font-size: small;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 20px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: '\25BC';
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+.legend {
+    position: absolute;
+    left: 2rem;
+    top: 50rem;
+}
+
+.rectangle {
+    animation: rectangle 3s linear infinite;
+}
+
+.rectangle-reverse {
+    animation: rectangle_reverse 3s linear infinite;
+}
+
+#svgs > object {
+    width: 5rem;
+    height: 6rem;
+    margin: 10px;
+}
+
+.young {
+    height: 4rem !important;
+}
+
+.svg__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+fieldset {
+    margin: 20px;
+    max-width: 400px;
+}
+label > input[type='radio'] + * {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+label > span {
+    font-size: medium;
+}
+
+.header-vis {
+    margin: 2rem;
+}
+
+@keyframes rectangle {
+    from {
+        transform: translate(250px, 150px) rotate(0deg);
+    }
+    to {
+        transform: translate(250px, 150px) rotate(360deg);
+    }
+}
+
+@keyframes rectangle_reverse {
+    from {
+        transform: translate(250px, 150px) rotate(360deg);
+    }
+    to {
+        transform: translate(250px, 150px) rotate(0deg);
+    }
+}
+
+.square {
+    animation: square 3s linear infinite;
+}
+
+.square-reverse {
+    animation: square_reverse 3s linear infinite;
+}
+
+@keyframes square {
+    from {
+        transform: translate(250px, 500px) rotate(360deg);
+    }
+    to {
+        transform: translate(250px, 500px) rotate(0deg);
+    }
+}
+
+@keyframes square_reverse {
+    from {
+        transform: translate(250px, 500px) rotate(0deg);
+    }
+    to {
+        transform: translate(250px, 500px) rotate(360deg);
+    }
+}
+
+.circle {
+    animation: roll 2s linear infinite;
+}
+
+.circle-reverse {
+    animation: roll-reverse 2s linear infinite;
+}
+
+@keyframes roll {
+    from {
+        transform: translate(150px, 950px);
+    }
+    to {
+        transform: translate(550px, 950px);
+    }
+}
+
+@keyframes roll-reverse {
+    from {
+        transform: translate(550px, 950px);
+    }
+    to {
+        transform: translate(150px, 950px);
+    }
+}
