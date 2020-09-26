@@ -39,11 +39,13 @@ let femaleGroup
 let shootingBarTip
 
 async function initD3GunMap() {
-    statesJSON = await d3.json('../resource/freq2_by_state_updated.json')
+    statesJSON = await d3.json(
+        '../suhannath.github.io/resource/freq2_by_state_updated.json'
+    )
 
-    gunEvents = await d3.csv('../resource/gunEvents.csv')
+    gunEvents = await d3.csv('../suhannath.github.io/resource/gunEvents.csv')
 
-    gunFreq = await d3.csv('../resource/frequency2.csv')
+    gunFreq = await d3.csv('../suhannath.github.io/resource/frequency2.csv')
 
     usData = await d3.json('https://unpkg.com/us-atlas@3/counties-10m.json')
 
